@@ -5,7 +5,6 @@ import { useCart } from '../context/CartContext';
 interface RecommendationScreenProps {
   category: 'tea' | 'coffee' | 'snack';
   recommendation: any;
-  onOrderClick: () => void;
   onNewRecommendation: () => void;
   onViewCart: () => void;
   onHome: () => void;
@@ -15,7 +14,6 @@ interface RecommendationScreenProps {
 const RecommendationScreen: React.FC<RecommendationScreenProps> = ({
   category,
   recommendation,
-  onOrderClick,
   onNewRecommendation,
   onViewCart,
   onHome,

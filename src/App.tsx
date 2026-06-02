@@ -262,7 +262,7 @@ const AppContent: React.FC = () => {
       {currentScreen === 'questions' && selectedCategory === 'tea' && <QuestionFlow title="🍵 Tea Recommendation Quiz" subtitle="Let's find your perfect tea blend" questions={teaQuestions} onSubmit={handleQuestionSubmit} onBack={handleBack} />}
       {currentScreen === 'questions' && selectedCategory === 'coffee' && <QuestionFlow title="☕ Coffee Recipe Builder" subtitle="Discover your ideal coffee profile" questions={coffeeQuestions} onSubmit={handleQuestionSubmit} onBack={handleBack} />}
       {currentScreen === 'questions' && selectedCategory === 'snack' && <QuestionFlow title="🍪 Snack Personalization" subtitle="Design your perfect functional snack" questions={snackQuestions} onSubmit={handleQuestionSubmit} onBack={handleBack} />}
-      {currentScreen === 'recommendation' && selectedCategory && recommendation && <RecommendationScreen category={selectedCategory} recommendation={recommendation} onOrderClick={handleOrder} onNewRecommendation={handleNewRecommendation} onViewCart={handleViewCart} onHome={handleHomeClick} onDesignTop={handleDesignTop} />}
+      {currentScreen === 'recommendation' && selectedCategory && recommendation && <RecommendationScreen category={selectedCategory} recommendation={recommendation} onNewRecommendation={handleNewRecommendation} onViewCart={handleViewCart} onHome={handleHomeClick} onDesignTop={handleDesignTop} />}
       
       {/* Biscuit Customization Flow (Snacks only) */}
       {currentScreen === 'biscuit_shape' && <BiscuitShapeSelector onShapeSelect={handleBiscuitShapeSelect} onBack={handleBiscuitBack} />}

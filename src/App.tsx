@@ -170,18 +170,6 @@ const AppContent: React.FC = () => {
     setCurrentScreen('biscuit_shape');
   };
 
-  const handleOrder = () => {
-    // For snacks, go to biscuit customization. For other items, place order directly
-    if (selectedCategory === 'snack') {
-      setBiscuitShape(null);
-      setBiscuitContent(null);
-      setBiscuitImageSrc(null);
-      setCurrentScreen('biscuit_shape');
-    } else {
-      alert(`Order placed for: ${recommendation.name}`);
-      handleBack();
-    }
-  };
 
   const handleBiscuitShapeSelect = (shape: 'round' | 'rectangle') => {
     setBiscuitShape(shape);

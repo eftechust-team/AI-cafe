@@ -213,12 +213,12 @@ const FloatingCartPanel: React.FC<FloatingCartPanelProps> = ({ isOpen, onClose, 
             </div>
           ) : (
             cart.map((item) => (
-              <div key={item.id} style={styles.cartItem}>
+              <div key={item.id!} style={styles.cartItem}>
                 <div style={styles.itemHeader}>
                   <div style={styles.itemName}>{item.productName}</div>
                   <button
                     style={styles.removeButton}
-                    onClick={() => removeFromCart(item.id)}
+                    onClick={() => removeFromCart(item.id!)}
                     title="Remove item"
                   >
                     🗑️
@@ -239,7 +239,7 @@ const FloatingCartPanel: React.FC<FloatingCartPanelProps> = ({ isOpen, onClose, 
                 <div style={styles.quantityControl}>
                   <button
                     style={styles.quantityButton}
-                    onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                    onClick={() => updateQuantity(item.id!, item.quantity - 1)}
                     onMouseEnter={(e) => {
                       (e.currentTarget as HTMLButtonElement).style.background = '#d9e0e8';
                     }}
@@ -252,7 +252,7 @@ const FloatingCartPanel: React.FC<FloatingCartPanelProps> = ({ isOpen, onClose, 
                   <div style={styles.quantity}>{item.quantity}</div>
                   <button
                     style={styles.quantityButton}
-                    onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                    onClick={() => updateQuantity(item.id!, item.quantity + 1)}
                     onMouseEnter={(e) => {
                       (e.currentTarget as HTMLButtonElement).style.background = '#d9e0e8';
                     }}

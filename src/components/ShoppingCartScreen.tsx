@@ -301,7 +301,7 @@ const ShoppingCartScreen: React.FC<ShoppingCartScreenProps> = ({ onContinueShopp
                 <div style={styles.quantityControl}>
                   <button
                     style={styles.quantityButton}
-                    onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                    onClick={() => updateQuantity(item.id!, item.quantity - 1)}
                     onMouseEnter={(e) => {
                       (e.target as HTMLElement).style.transform = 'scale(1.2)';
                     }}
@@ -314,7 +314,7 @@ const ShoppingCartScreen: React.FC<ShoppingCartScreenProps> = ({ onContinueShopp
                   <div style={styles.quantity}>{item.quantity}</div>
                   <button
                     style={styles.quantityButton}
-                    onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                    onClick={() => updateQuantity(item.id!, item.quantity + 1)}
                     onMouseEnter={(e) => {
                       (e.target as HTMLElement).style.transform = 'scale(1.2)';
                     }}
@@ -327,7 +327,7 @@ const ShoppingCartScreen: React.FC<ShoppingCartScreenProps> = ({ onContinueShopp
                 </div>
                 <button
                   style={styles.deleteButton}
-                  onClick={() => removeFromCart(item.id)}
+                  onClick={() => removeFromCart(item.id!)}
                   onMouseEnter={(e) => {
                     (e.target as HTMLElement).style.background = '#fde2e2';
                   }}
